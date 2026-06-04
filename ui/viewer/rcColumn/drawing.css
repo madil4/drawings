@@ -1,0 +1,155 @@
+.rc-column-drawing {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+}
+
+.rc-column-drawing-sheet {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 6px;
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.rc-column-detail-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  background: #ffffff;
+}
+
+.rc-column-detail-svg text {
+  fill: #111111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.rc-column-detail-svg marker path {
+  fill: #111111;
+}
+
+.drawing-layer {
+  fill: none;
+  stroke: #111111;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+.concrete-core {
+  fill: #ffffff;
+  stroke: #111111;
+  stroke-width: 1.5;
+}
+
+.section-tie {
+  fill: none;
+  stroke: #111111;
+  stroke-width: 3;
+}
+
+.rebar-line {
+  fill: none;
+  stroke: #111111;
+  stroke-width: 4;
+}
+
+.link-line {
+  stroke: #111111;
+  stroke-width: 3;
+}
+
+.section-bar {
+  fill: #111111;
+  stroke: none;
+}
+
+.tie-hook {
+  fill: none;
+  stroke: #111111;
+  stroke-width: 3;
+}
+
+.extension-line,
+.leader-line,
+.note-underline {
+  stroke: #111111;
+  stroke-width: 1;
+}
+
+.leader-line {
+  marker-start: url("#rc-column-arrow");
+}
+
+.dimension-line,
+.height-dimension-line {
+  fill: none;
+  marker-end: url("#rc-column-arrow");
+  marker-start: url("#rc-column-arrow");
+  stroke: #111111;
+  stroke-width: 1;
+}
+
+.dimension-text,
+.callout {
+  font-size: 24px;
+}
+
+.height-text {
+  font-size: 26px;
+}
+
+.section-label {
+  font-size: 24px;
+}
+
+.drawing-title {
+  font-size: 30px;
+}
+
+@media (max-width: 780px) {
+  .rc-column-drawing-sheet {
+    padding: 4px;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  body.printing-canvas .rc-column-drawing-sheet {
+    background: #ffffff !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  body.printing-canvas .rc-column-detail-svg {
+    background: #ffffff !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-height: 270mm !important;
+  }
+}

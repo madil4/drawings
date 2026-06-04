@@ -1,0 +1,67 @@
+#column-controls {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+  width: 180px;
+
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px var(--shadow);
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+
+#column-controls summary {
+  padding: 6px 10px;
+
+  cursor: pointer;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s ease;
+}
+
+#column-controls summary:hover,
+#column-controls[open] summary {
+  background: var(--bg-hover);
+}
+
+#column-controls .column-controls-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  gap: 6px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+#column-controls .column-controls-item:last-child {
+  border-bottom: none;
+}
+
+#column-controls .column-controls-item label {
+  margin-right: auto;
+
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+#column-controls .column-controls-item input[type="range"] {
+  width: 70px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: var(--accent);
+}
+
+#column-controls .column-controls-item .value-display {
+  min-width: 30px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
